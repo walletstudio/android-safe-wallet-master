@@ -1,0 +1,3 @@
+include 'wallet'
+include 'native-scrypt'
+include 'native-x11'
