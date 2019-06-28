@@ -54,8 +54,8 @@ public class CoinDefinition {
     public static final boolean feeCanBeRaised = false;
 
     // Dash 0.12.1.x
-    public static final int PROTOCOL_VERSION = 70208;          //version.h PROTOCOL_VERSION
-    public static final int MIN_PROTOCOL_VERSION = 70208;        //version.h MIN_PROTO_VERSION
+    public static final int PROTOCOL_VERSION = 70210;          //version.h PROTOCOL_VERSION
+    public static final int MIN_PROTOCOL_VERSION = 70210;        //version.h MIN_PROTO_VERSION
 
     public static final int MAX_BLOCK_SIZE = 1000 * 1000;
 
@@ -126,7 +126,11 @@ public class CoinDefinition {
     public static final int SAFE_BRANCH_HEIGHT = 807085; // 分叉高度
     public static final int DASH_DISABLE_HEIGHT = 943809; // 达世封存高度
     public static final int START_SPOS_HEIGHT = 1092826; // 开始SPOS高度
-    public static final long SPOS_MAX_INCENTIVES = 310662692L;  //最大挖矿激励
+    public static final int ADJUST_MIN_REWARD_HEIGHT = 1109103; // 调整奖励高度
+    public static final int FORBID_OLD_VERSION_HEIGHT = 1101183; // 节点强制更新高度
+    public static final long MIN_INCENTIVES = 310662692L;  //最小挖矿激励
+    public static final long SPOS_MIN_INCENTIVES = 345180768L;  //SPOS最小挖矿激励
+
     public static final String BLOCKEXPLORER_BASE_URL = "http://chain.anwang.com/"; //区块浏览器
     public static final long genesisBlockDifficultyTarget = (0x1e0ffff0L);
     public static final long genesisBlockTime = 1390095618L;
@@ -153,7 +157,10 @@ public class CoinDefinition {
     public static final int TEST_SAFE_BRANCH_HEIGHT = 175; //测试分叉高度
     public static final int TEST_DASH_DISABLE_HEIGHT = 400; //测试达世封存高度
     public static final int TEST_START_SPOS_HEIGHT = 104077; // 开始SPOS高度
-    public static final long TEST_SPOS_MAX_INCENTIVES = 450000000L;  //最大挖矿激励
+    public static final int TEST_ADJUST_MIN_REWARD_HEIGHT = 183510; // 调整奖励高度
+    public static final int TEST_FORBID_OLD_VERSION_HEIGHT = 183500; // 节点强制更新高度
+    public static final long TEST_MIN_INCENTIVES = 450000000L;  //最小挖矿激励
+    public static final long TEST_SPOS_MIN_INCENTIVES = 500000000L;  //SOPS最小挖矿激励
     public static final String TEST_BLOCKEXPLORER_BASE_URL = "http://106.12.144.124/"; //区块浏览器
     public static final long testGenesisBlockDifficultyTarget = (0x1f0ffff0);
     public static final long testGenesisBlockTime = 1515222820L;

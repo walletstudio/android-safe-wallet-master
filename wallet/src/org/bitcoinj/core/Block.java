@@ -403,7 +403,12 @@ public class Block extends Message {
     public Coin getSposBlockInflationCoin(int height, boolean fSuperblockPartOnly)
     {
         int nPrevHeight = height - 1;
-        long nSubsidy = Constants.NETWORK_PARAMETERS.getMaxIncentives();
+        long nSubsidy;
+        if(nPrevHeight >= Constants.NETWORK_PARAMETERS.getAdjustMinRewardHeight()){
+            nSubsidy = Constants.NETWORK_PARAMETERS.getSposMinIncentives();
+        } else {
+            nSubsidy = Constants.NETWORK_PARAMETERS.getMinIncentives();
+        }
         int nNextDecrementHeight = 1261441;
         int g_nStartSPOSHeight = Constants.NETWORK_PARAMETERS.getStartSposHeight();
         int nOffset = nNextDecrementHeight - g_nStartSPOSHeight;

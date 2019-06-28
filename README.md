@@ -16,7 +16,7 @@ Full Guide for building the APK:
 
 `$ git clone https://github.com/BankLedger/android-safe-wallet-master`
 
-`$ cd safe-wallet`
+`$ cd android-safe-wallet-master`
 
 `$ gradle clean build -x test`
 

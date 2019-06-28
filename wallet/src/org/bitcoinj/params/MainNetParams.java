@@ -115,11 +115,17 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         if(Constants.TEST){
             nCriticalHeight = CoinDefinition.TEST_SAFE_BRANCH_HEIGHT;
             startSposHeight = CoinDefinition.TEST_START_SPOS_HEIGHT;
-            maxIncentives = CoinDefinition.TEST_SPOS_MAX_INCENTIVES;
+            adjustMinRewardHeight = CoinDefinition.TEST_ADJUST_MIN_REWARD_HEIGHT;
+            forbidOldVersionHeight = CoinDefinition.TEST_FORBID_OLD_VERSION_HEIGHT;
+            minIncentives = CoinDefinition.TEST_MIN_INCENTIVES;
+            sposMinIncentives = CoinDefinition.TEST_SPOS_MIN_INCENTIVES;
         } else {
             nCriticalHeight = CoinDefinition.SAFE_BRANCH_HEIGHT;
             startSposHeight = CoinDefinition.START_SPOS_HEIGHT;
-            maxIncentives = CoinDefinition.SPOS_MAX_INCENTIVES;
+            adjustMinRewardHeight = CoinDefinition.ADJUST_MIN_REWARD_HEIGHT;
+            forbidOldVersionHeight = CoinDefinition.FORBID_OLD_VERSION_HEIGHT;
+            minIncentives = CoinDefinition.MIN_INCENTIVES;
+            sposMinIncentives = CoinDefinition.SPOS_MIN_INCENTIVES;
         }
 
     }
